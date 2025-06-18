@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSE Dashboard</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding-top: 50px;
+    }
+
+    .box {
+      background: #1e1e1e;
+      border-radius: 20px;
+      padding: 40px;
+      margin: auto;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0,255,128,0.2);
+    }
+
+    h1 {
+      color: #00ff99;
+      font-size: 28px;
+    }
+
+    .value {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .label {
+      font-size: 18px;
+      color: #cccccc;
+    }
+
+    .time {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.reload();
+    }, 60000);
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h1>📊 NSE Market Volume</h1>
+    <div class="value">₹ {{ buyers }} Cr</div>
+    <div class="label">🟢 Total Buyers Today</div>
+    <br>
+    <div class="value">₹ {{ sellers }} Cr</div>
+    <div class="label">🔴 Total Sellers Today</div>
+    <div class="time">⏱ Last Updated: {{ time }}</div>
+  </div>
+</body>
+</html>
